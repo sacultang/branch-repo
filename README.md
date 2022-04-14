@@ -11,6 +11,33 @@ Sesame is Free software, and may be redistributed under the terms of specified i
   - Apache 재단이 만든 라이센스로, 특허권 관련 내용이 포함되어 있습니다.
 - GNU General Public License v3.0
   - 가장 많이 알려져있으며, 의무사항(해당 라이센스가 적용된 소스코드 사용시 GPL을 따라야 함)이 존재합니다.
+## git bash 명령어
+1. 파일 이름 수정
+    - git에서는 파일이름을 수정하면 기존거는 삭제되고 바뀐이름의 파일이 추가된걸로 인식됨
+    - git을 붙이면 변경된 이름으로 추적함
+```bash
+$ mv hello.py helloworld.py -> worst
+$ git mv hello.py helloworld.py -> good
+```
+
+
+2. 커밋을 잘못하였을때 최신의(HEAD) 커밋단계로 파일을 되돌림
+```bash
+$ git restore [file name]
+```
+3. git add 후 다시 되돌릴 때
+```bash
+$ git reset HEAD [file name]
+```
+4. git commit 메시지 작성 되돌리기
+```bash
+$ git commit --ammend
+```
+5. commit 다중 파일 되돌리기  
+  HEAD: 최신, ~3: 3개의 파일을, ..: 순차적으로
+```bash
+$ git revert -no-commit HEAD~3..
+```
 
 ## 새로운 Branch 만들기
 
@@ -68,3 +95,77 @@ tag push
 ```bash
 $ git push --tags
 ```
+
+## TEAM-PROJECT
+
+- team 단위 git-flow 전략
+### 팀장 flow
+1. 팀장이 git repository를 생성 후 디렉토리에 git clone 해온다
+```bash
+$ git clone [git주소]
+```
+2. flow init 하면 develop branch가 생성 됨  
+    - 파일 생성 (ex:main.js)
+```bash
+$ git flow init
+```
+
+```bash
+$ touch main.js
+```
+3. git add 후 commit 해준다
+```bash
+$ git add main.js
+$ git commit
+```
+4. develop에서 처음 push 함으로 -u upstream
+    - https://pers0n4.io/github-remote-repository-and-upstream/  
+upstream & downstream 이해하기
+
+```bash
+$ git push -u origin develop
+```
+
+5. 팀원에게 깃 주소 전달
+
+---
+
+### 팀원 flow
+1. Issues 작성
+    - 팀장 레포에서만 이슈가 있음
+    - 다른 사람과 작업이 겹치지 않기 위해 작성
+2. Fork 를 함
+    - 자신의 권한이 된 레포가 본인 깃에 생성됨
+3. 자신의 깃에 있는 레포를 clone 해온다
+```bash
+$ git clone [fork해온 git 주소]
+```
+4. git flow init
+    - develop 브랜치 생성됨
+    - 팀장이 생성한 파일 (main.js)도 같이 생성 된다
+```bash
+$ git flow init
+```
+5. 기능 개발할때는 feature start
+```bash
+$ git flow feature start [new branch name]
+```
+6. file(main.js)에서 작업 후 add, commit
+```bash
+$ git add main.js
+$ git commit
+```
+7. 개발 종료후 feature finish
+  - develop 브랜치로 작업내역이 들어간다
+```bash
+$ git flow feature finish [new branch name]
+```
+8. push
+```
+$ git push -u origin develop
+```
+9. github 으로 이동
+    1. ompare & pull request 버튼 활성화 눌러줌  
+    1. branch 확인 중요
+
+---
