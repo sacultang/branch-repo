@@ -169,3 +169,6 @@ $ git push -u origin develop
     1. branch 확인 중요
 
 ---
+open된 pull request에서 팀원이 추가 작업 후 push를 하게 되면  
+열려 있는 pull request의 하위로 내역이 들어 오게 된다.
+(작업내역이 섞여버릴 우려가 있음)
