@@ -1,1 +1,2 @@
-if magic_num%3==0: print('hello')
+if magin_num%3==0:
+print('Hello')

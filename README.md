@@ -42,3 +42,19 @@ Sesame is Free software, and may be redistributed under the terms of specified i
   - Apache 재단이 만든 라이센스로, 특허권 관련 내용이 포함되어 있습니다.
 - GNU General Public License v3.0
   - 가장 많이 알려져있으며, 의무사항(해당 라이센스가 적용된 소스코드 사용시 GPL을 따라야 함)이 존재합니다.
+
+## 새로운 Branch 만들기
+
+Branch 만들기
+```bash
+$ git branch [new branch]
+```
+Branch 바꾸기
+```bash
+$ git switch [new branch]
+```
+Branch 병합
+- 새 브랜치를 디폴트브랜치로 땡겨온다는 개념
+```bash
+$ git merge [new branch]
+```
