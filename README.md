@@ -67,3 +67,35 @@ $ git branch -D [branch name]
 Branch 병합시 문제<br>
 브랜치 양쪽에서 같은 파일을 수정 할시 에러 발생
 - 파일을 잘 수정해야함
+
+## git-flow
+
+```bash
+$ git flow init
+```
+- Fatal: Working tree contains unstaged changes Aborting 이 발생했을 경우 -> git flow는 변경된 파일이 없는 상태에서 초기화 해주어야 하므로 git stash(변경된 기능 임시 저장) 후에 git flow init 명령어 다시 입력.
+
+새로운 브랜치
+```bash
+$ git flow feature start [new branch]
+```
+
+release 시작
+```bash
+$ git flow release start [base v]
+```
+
+release finish
+```bash
+$ git flow release finish
+```
+
+git push
+```bash
+$ git push -u origin [new branch]
+```
+
+tag push
+```bash
+$ git push --tags
+```
