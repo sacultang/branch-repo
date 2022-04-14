@@ -58,3 +58,12 @@ Branch 병합
 ```bash
 $ git merge [new branch]
 ```
+
+Branch 삭제
+- 브랜치 라이프사이클이 끝나면 바로 삭제 해주는게 좋다
+```bash
+$ git branch -D [branch name]
+```
+Branch 병합시 문제<br>
+브랜치 양쪽에서 같은 파일을 수정 할시 에러 발생
+- 파일을 잘 수정해야함
