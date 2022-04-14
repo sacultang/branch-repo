@@ -1,34 +1,3 @@
-## README.md 양식
-### Project Name
-Abstract your project in few lines.
-see [project sample page]
-
-### Documentation
-
-### Installation
-To install,
-```
-$ pip install sesame
-```
-and run 
-```
-$ python open_sesame.py
-```
-
-### Supported Python versions
-`>=3.6`
-
-### More Information
-```
-- [API docs]()
-- [Official website]()
-```
-
-### Contributing
-```
-Please see [CONTRIBUTING.md]()
-```
-
 ### License
 Sesame is Free software, and may be redistributed under the terms of specified in the [LICENSE]() file.
 
