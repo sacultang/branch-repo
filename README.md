@@ -165,7 +165,7 @@ $ git flow feature finish [new branch name]
 $ git push -u origin develop
 ```
 9. github 으로 이동
-    1. ompare & pull request 버튼 활성화 눌러줌  
+    1. compare & pull request 버튼 활성화 눌러줌  
     1. branch 확인 중요
 
 ---
