@@ -175,19 +175,19 @@ open된 pull request에서 팀원이 추가 작업 후 push를 하게 되면
 
 ## Git prefix
 
-feat: 기능 개발 관련. 
-fix: 오류 개선 혹은 버그 패치. 
-docs: 문서화 작업. 
-test: test 관련. 
-conf: 환경설정 관련.
-build: 빌드 관련.
-ci: Continuous Integration 관련.
+feat: 기능 개발 관련<br>
+fix: 오류 개선 혹은 버그 패치<br>
+docs: 문서화 작업. <br>
+test: test 관련. <br>
+conf: 환경설정 관련.<br>
+build: 빌드 관련.<br>
+ci: Continuous Integration 관련.<br>
 
 ----
 
-feat: Add server.py.
-fix: Fix Typo server.py.
-docs: Add README.md, LICENSE.
-conf: Create .env, .gitignore, dockerfile.
-BREAKING CHANGE: Drop Support /api/v1.
-refactor: Refactor user classes.
+feat: Add server.py.<br>
+fix: Fix Typo server.py.<br>
+docs: Add README.md, LICENSE.<br>
+conf: Create .env, .gitignore, dockerfile.<br>
+BREAKING CHANGE: Drop Support /api/v1.<br>
+refactor: Refactor user classes.<br>
